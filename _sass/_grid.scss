@@ -1,0 +1,48 @@
+// Vars
+$grid-columns:      6 !default;
+$grid-column-width: percentage(100/$grid-columns);
+$grid-gutter-width: $su*2 !default;
+
+
+
+
+// column builder
+
+// get column width from variables
+@function column-width($span, $column-width: $grid-column-width) {
+    @return $span * $column-width;
+}
+
+// get a percentage width
+@function percent-width($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+@mixin grid_container() {
+    margin-left: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width/2;
+}
+
+@function span($span, $context: $grid-columns) {
+    @return percent-width(column-width($span, $grid-column-width), column-width($context, $grid-column-width))
+}
+
+// Generate a width from a context
+// e.g. column(1,2) is like saying 1 column out of 2
+@mixin column($span, $context:$grid-columns) {
+    width: span($span, $context);
+}
+
+// Add padding to grid items on the left or right.
+// Default is both sides
+@mixin pad_column($direction: 'default', $large: false) {
+    $gutter-width: $grid-gutter-width / 2;
+    @if $large {
+        $gutter-width: $grid-gutter-width;
+    }
+    @if $direction == 'left' or $direction == 'right' {
+        padding-#{$direction}: $gutter-width;
+    } @else {
+        @include padding_lr($gutter-width);
+    }
+}

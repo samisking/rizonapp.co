@@ -1,0 +1,19 @@
+.feature-list {
+    list-style: none;
+    overflow: hidden;
+
+    @include mq(min-lap) {
+        @include grid_container();
+    }
+}
+
+    .feature-list__item {
+        margin-bottom: $su;
+
+        @include mq(min-lap) {
+            width: span(1,2);
+            display: inline-block;
+            vertical-align: top;
+            @include pad_column();
+        }
+    }

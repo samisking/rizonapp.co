@@ -1,0 +1,23 @@
+// ^ HTML & BODY
+// -------------
+html {
+    height: 100%;
+    font-size: 14px;
+}
+
+html, body {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: $font-din;
+    line-height: 1.428;
+    color: $color-black;
+    -webkit-text-size-adjust: none;
+}
+
+
+// usually a container with a link in it
+// but the whole container is clickable
+.is-clickable { cursor: pointer; }

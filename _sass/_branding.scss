@@ -1,0 +1,24 @@
+.branding__app-icon,
+.branding__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    border: none;
+}
+
+.branding__app-icon {
+    background: url('/assets/img/app-icon.svg') no-repeat center;
+    width: 9.2rem;
+    height: 9.2rem;
+    margin-bottom: $su*2;
+}
+
+.branding__logo {
+    background: url('/assets/img/logo.svg') no-repeat center;
+    width: 9.75rem;
+    height: 1.75rem;
+    margin-bottom: $su*2.5;
+}

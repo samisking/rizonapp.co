@@ -1,0 +1,77 @@
+@include font-face('DIN', '/assets/fonts/din-regular');
+
+
+
+
+
+// ^ Headings
+// ----------
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: normal;
+    font-size: $milli-size;
+}
+
+h1, .h1, h2, .h2, h3, .h3 { margin-bottom: $su/2; }
+h4, .h4, h5, .h5, h6, .h6 { margin-bottom: $su; }
+
+h2, .h2 {
+    @include mq(min-lap) {
+        font-size: $gamma-size;
+        letter-spacing: 0.2em;
+    }
+}
+
+h3, .h3 {
+    @include mq(min-lap) {
+        font-size: $epsilon-size;
+    }
+}
+
+h4, .h4 { color: $color-golden; }
+h5, .h5 { color: $color-twilight; }
+h6, .h6 { color: $color-grey; }
+
+
+
+
+
+// ^ Inline text
+// -------------
+
+p {
+    margin-bottom: $su;
+}
+
+// Style text like the Rizon app
+.text--rizon {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+// Subtle text
+.text--subtle {
+    color: $color-grey;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+
+
+
+
+
+// ^ Links
+// ---------
+
+a {
+    color: $color-golden;
+    border-bottom: 1px solid transparent;
+    &:hover         { border-bottom-color: $color-golden; }
+    &.a--no-border  { border: none; }
+}
+
+.link--subtle {
+    color: $color-grey;
+    &:hover { color: $color-golden; }
+}

@@ -1,0 +1,44 @@
+// Colours
+$color-black:       #151719;
+$color-golden:      #FF4600;
+$color-twilight:    #3D5266;
+$color-grey:        rgba($color-black, 0.3);
+$color-grey-light:  #F9F9F9;
+
+
+// Sizes
+$beta-size:         2.28rem;     // 32px
+$gamma-size:        1.72rem;     // 24px
+$delta-size:        1.428rem;    // 20px
+$epsilon-size:      1.285rem;    // 18px
+$zeta-size:         1.142rem;    // 16px
+$milli-size:        1rem;        // 14px
+
+$su: $zeta-size;
+
+
+// Fonts
+$font-din:  "DIN", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-mono: Menlo, Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+
+
+// Animation timing
+$timing-cubic:      cubic-bezier(0.2, 0.4, 0.1, 1);
+$animation-cubic:   300ms $timing-cubic;
+
+
+// Breakpoints
+$palm-size:         30em;
+$lap-size:          48em;
+$portable-size:     64em;
+$portable-lg-size:  76em;
+$desk-size:         90em;
+$desk-lg-size:      106.25em;
+
+
+// Layers
+$layer-0: 0;
+$layer-1: 10;
+$layer-2: 20;
+$layer-3: 30;
+$layer-4: 40;

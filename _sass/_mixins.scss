@@ -1,0 +1,105 @@
+// font-face generator
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+             url('#{$file-path}.woff') format('woff'),
+             url('#{$file-path}.ttf') format('truetype'),
+             url('#{$file-path}.svg##{$font-family}') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+
+
+
+
+// Position helpers
+@mixin atl($top: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin atr($top: 0, $right: 0) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin padding_tb($tb) {
+    padding-top: $tb;
+    padding-bottom: $tb;
+}
+
+@mixin padding_lr($lr) {
+    padding-left: $lr;
+    padding-right: $lr;
+}
+
+@mixin margin_tb($tb) {
+    margin-top: $tb;
+    margin-bottom: $tb;
+}
+
+@mixin margin_lr($lr) {
+    margin-left: $lr;
+    margin-right: $lr;
+}
+
+
+
+
+
+// Media queries
+@mixin mq($point) {
+    @if $point == min-palm {
+        @media only screen and (min-width: $palm-size) { @content; }
+    }
+    @else if $point == min-lap {
+        @media only screen and (min-width: $lap-size) { @content; }
+    }
+    @else if $point == min-portable {
+        @media only screen and (min-width: $portable-size) { @content; }
+    }
+    @else if $point == min-portable-lg {
+        @media only screen and (min-width: $portable-lg-size) { @content; }
+    }
+    @else if $point == min-desk {
+        @media only screen and (min-width: $desk-size) { @content; }
+    }
+}
+
+// Defining mq's here for mqpacker order
+@include mq(min-palm) { /* hey mqpacker */ }
+@include mq(min-lap) { /* hey mqpacker */ }
+@include mq(min-portable) { /* hey mqpacker */ }
+@include mq(min-portable-lg) { /* hey mqpacker */ }
+@include mq(min-desk) { /* hey mqpacker */ }
+
+
+
+
+
+// Animation
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+// usage: @include animation(name, 1s, ease-in);
+@mixin animation($name, $duration:0.5s, $easing:ease-in-out) {
+    animation: $name $duration $easing;
+}

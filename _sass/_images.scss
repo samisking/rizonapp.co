@@ -1,0 +1,26 @@
+// ^ Images
+// --------
+
+.image-holder {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    margin-bottom: $su*2;
+    background: $color-grey-light;
+
+    @include mq(min-palm) {
+        margin-bottom: $su*2.5;
+    }
+
+    @include mq(min-lap) {
+        margin-bottom: $su*3;
+    }
+
+    @include mq(min-portable-lg) {
+        margin-bottom: $su*3.5;
+    }
+}
+
+    .image-holder__image {
+        line-height: 0;
+    }
