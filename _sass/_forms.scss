@@ -1,8 +1,11 @@
 .input--text {
     font-family: $font-din;
+    color: $color-black;
     display: block;
     border-bottom: 2px solid rgba($color-grey, 0.1);
     width: 100%;
+    padding: 0;
+    margin: 0;
     padding-bottom: $su;
 
     &:focus {
