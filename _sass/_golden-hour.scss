@@ -1,0 +1,44 @@
+.taster__pre-flight,
+.taster__post-flight {
+    display: none;
+}
+
+.state--pre-flight {
+    .taster__pre-flight {
+        display: block;
+    }
+}
+
+.state--post-flight {
+    .taster__post-flight {
+        display: block;
+    }
+}
+
+.taster__post-flight {
+
+}
+
+
+
+
+
+    .gh__location,
+    .gh__am,
+    .gh__pm,
+    .gh__date {
+        overflow: hidden;
+        padding: $su 0;
+    }
+
+        .gh__start,
+        .gh__end {
+            max-width: 10rem;
+            width: span(1,2);
+            display: inline-block;
+        }
+
+            .gh__time {
+                font-size: $gamma-size*2;
+                letter-spacing: 0;
+            }

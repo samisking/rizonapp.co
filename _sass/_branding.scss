@@ -1,20 +1,27 @@
 .branding__app-icon,
 .branding__logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
     border: none;
+
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .branding__app-icon {
-    background: url('/assets/img/app-icon.svg') no-repeat center;
-    width: 9.2rem;
-    height: 9.2rem;
+    width: 6.85rem;
+    height: 6.85rem;
+    border-radius: 1.57rem;
     margin-bottom: $su*2;
 }
+
+    .branding__app-icon--on-black {
+        box-shadow: -1px -1px 0 rgba(#FF8F66, 0.2), 1px 1px 0 rgba($color-twilight, 0.4), 0 0 5px rgba(0,0,0,0.4);
+    }
 
 .branding__logo {
     background: url('/assets/img/logo.svg') no-repeat center;
@@ -22,3 +29,7 @@
     height: 1.75rem;
     margin-bottom: $su*2.5;
 }
+
+    .logo--dark {
+        background-image: url('/assets/img/logo--dark.svg');
+    }

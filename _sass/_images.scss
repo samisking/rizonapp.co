@@ -4,20 +4,17 @@
 .image-holder {
     height: 0;
     overflow: hidden;
-    padding-bottom: 56.25%;
-    margin-bottom: $su*2;
+    // padding-bottom: 56.25%;
+    padding-bottom: 66.666%;
+    margin-bottom: $su*1.5;
     background: $color-grey-light;
 
     @include mq(min-palm) {
-        margin-bottom: $su*2.5;
+        margin-bottom: $su*2;
     }
 
     @include mq(min-lap) {
-        margin-bottom: $su*3;
-    }
-
-    @include mq(min-portable-lg) {
-        margin-bottom: $su*3.5;
+        margin-bottom: $su*4;
     }
 }
 

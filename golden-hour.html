@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rizon &ndash; Your next Golden Hour</title>
+    <link rel="stylesheet" href="/assets/css/rizonappco.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+</head>
+<body class="page--dark">
+
+    <section class="page-small  text--center">
+        <a href="/"><h1 class="branding__logo  branding__logo--center">Rizon</h1></a>
+        <div class="taster__pre-flight  mb4">
+            <h3 class="text--rizon">Experience Rizon</h3>
+
+            <p class="mb2">We built this quick web utility so you can find out todays Golden Hour times for your current location. Just allow location access below to see when Golden Hour will happen for you!</p>
+
+            <a href="#" class="button  button--on-dark  text--rizon  mb2  js--show-times">Grant location access</a>
+
+            <p class="text--subtle">If you want to see other dates and locations, along with setting reminders, you'll have to wait for the Rizon iOS app to launch.</p>
+        </div>
+
+        <div class="taster__post-flight  mb3  text--rizon  gh">
+            <div class="gh__location">
+                <h3 class="mb0"><span class="js--location-name">Locating…</span></h3>
+                <h6 class="mb0"><span class="js--location-coords">Getting Coordinates</span></h6>
+            </div>
+            <div class="gh__am">
+                <div class="gh__start">
+                    <p class="gh__time  mb0  js--am-gh-s">0000</p>
+                    <h6 class="mb0  rizon--text">AM Starts</h6>
+                </div><div class="gh__end">
+                    <p class="gh__time  mb0  js--am-gh-e">0000</p>
+                    <h6 class="mb0  rizon--text">AM Ends</h6>
+                </div>
+            </div>
+            <div class="gh__pm">
+                <div class="gh__start">
+                    <p class="gh__time  mb0  js--pm-gh-s">0000</p>
+                    <h6 class="mb0  rizon--text">PM Starts</h6>
+                </div><div class="gh__end">
+                    <p class="gh__time  mb0  js--pm-gh-e">0000</p>
+                    <h6 class="mb0  rizon--text">PM Ends</h6>
+                </div>
+            </div>
+            <div class="gh__date">
+                <h3 class="mb0">Today</h3>
+                <h6 class="mb0"><span class="js--todays-date">Getting Coordinates</span></h6>
+            </div>
+        </div>
+
+        <p><a href="/">rizonapp.co</a></p>
+    </section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuP66eb5sMmWKQKzlweE9sl6ZYNV0r2H4&sensor=false"></script>
+<script src="/assets/js/rizonappco.js"></script>
+</body>
+</html>

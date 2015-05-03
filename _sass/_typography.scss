@@ -16,21 +16,23 @@ h1, .h1, h2, .h2, h3, .h3 { margin-bottom: $su/2; }
 h4, .h4, h5, .h5, h6, .h6 { margin-bottom: $su; }
 
 h2, .h2 {
-    @include mq(min-lap) {
+    font-size: $zeta-size;
+
+    @include mq(min-palm) {
+        font-size: $epsilon-size;
+    }
+
+    @include mq(min-portable) {
         font-size: $gamma-size;
         letter-spacing: 0.2em;
-    }
-}
-
-h3, .h3 {
-    @include mq(min-lap) {
-        font-size: $epsilon-size;
     }
 }
 
 h4, .h4 { color: $color-golden; }
 h5, .h5 { color: $color-twilight; }
 h6, .h6 { color: $color-grey; }
+
+.page--dark h6, .page--dark .h6 { color: rgba(white, 0.4); }
 
 
 
@@ -57,6 +59,10 @@ p {
     font-size: 1rem;
 }
 
+.text--center {
+    text-align: center;
+}
+
 
 
 
@@ -66,12 +72,18 @@ p {
 
 a {
     color: $color-golden;
-    border-bottom: 1px solid transparent;
-    &:hover         { border-bottom-color: $color-golden; }
-    &.a--no-border  { border: none; }
+    border-bottom: 2px solid transparent;
+    &:hover { border-color: $color-golden; }
 }
 
 .link--subtle {
     color: $color-grey;
+    border: none;
+    &:hover { color: $color-golden; }
+}
+
+.link--subtle--white {
+    color: rgba(white, 0.4);
+    border: none;
     &:hover { color: $color-golden; }
 }

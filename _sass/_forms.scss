@@ -1,23 +1,15 @@
 .input--text {
     font-family: $font-din;
+    font-size: $milli-size;
     color: $color-black;
     display: block;
     border-bottom: 2px solid rgba($color-grey, 0.1);
     width: 100%;
-    padding: 0;
+    padding: $su/2 0;
     margin: 0;
-    padding-bottom: $su;
 
     &:focus {
         border-color: $color-golden;
-    }
-
-    @include mq(min-palm) {
-        width: span(4,6);
-    }
-
-    @include mq(min-lap) {
-        width: span(3,6);
     }
 }
 
@@ -28,11 +20,22 @@
         text-align: center;
     }
 
-.button--text {
-    font-family: $font-din;
-    color: $color-golden;
-    text-transform: uppercase;
-    background: none;
-    margin: 0;
-    padding: 0;
+
+
+
+
+.form--inline {
+
 }
+
+    .form--inline__input,
+    .form--inline__button {
+        width: span(1,1);
+        line-height: 1;
+        padding-top: $su;
+        padding-bottom: $su;
+    }
+
+    .form--inline__input {
+        margin-bottom: $su;
+    }

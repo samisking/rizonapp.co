@@ -1,0 +1,29 @@
+.button {
+    font-family: $font-din;
+    font-size: $milli-size;
+    background: none;
+    display: inline-block;
+    border-radius: $su/3;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $color-golden;
+    color: $color-black;
+    padding: $su/2 $su;
+    cursor: pointer;
+    &:hover {
+        color: $color-golden;
+    }
+}
+
+    .button--on-dark {
+        color: white;
+    }
+
+
+.button--text {
+    color: $color-golden;
+    text-transform: uppercase;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
