@@ -109,21 +109,17 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['<%= app.js_src %>/**/*.js'],
                 tasks: [ 'concat' ]
-            },
-            // html: {
-            //     files: [
-            //         '*.html'
-            //       ],
-            //     tasks: [ '' ]
-            // }
+            }
         }
     });
 
     // Builds with default config
     grunt.registerTask('default', [
-        'sass',                             // compile sass
-        'css_mqpacker',                     // pack all media queries
-        'autoprefixer',                     // prefix everything
-        'concat',                           // concat js
+        'sass',         // compile sass
+        'css_mqpacker', // pack all media queries
+        'autoprefixer', // prefix everything
+        'cssmin',       // minify css
+        'concat',       // concat js
+        'uglify'        // minify js
     ]);
 }
