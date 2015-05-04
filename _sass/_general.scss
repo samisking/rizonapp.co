@@ -21,3 +21,12 @@ body {
 // usually a container with a link in it
 // but the whole container is clickable
 .is-clickable { cursor: pointer; }
+
+
+
+hr {
+    height: 1px;
+    border: none;
+    background: rgba($color-grey, 0.1);
+    margin: $su*2 auto;
+}

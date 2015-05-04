@@ -60,6 +60,7 @@ $page-margin-desktop: 10%;
         padding-left: $page-margin-mobile;
         padding-right: $page-margin-mobile;
         margin-bottom: $su*2.5;
+        overflow: hidden;
 
         @include mq(min-palm) {
             padding-left: span(0.5,6);
@@ -69,8 +70,6 @@ $page-margin-desktop: 10%;
 
         @include mq(min-lap) {
             margin-bottom: $su*6;
-            overflow: hidden;
-            @include grid_container();
         }
 
         @include mq(min-portable-lg) {
@@ -81,6 +80,14 @@ $page-margin-desktop: 10%;
             }
         }
     }
+
+        .section-content__container {
+            overflow: hidden;
+
+            @include mq(min-lap) {
+                @include grid_container();
+            }
+        }
 
         .section-content__title,
         .section-content__text {

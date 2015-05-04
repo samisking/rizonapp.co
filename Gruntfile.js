@@ -104,11 +104,11 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: ['<%= app.sass_src %>/**/*.scss'],
-                tasks: [ 'sass', 'autoprefixer' ]
+                tasks: [ 'sass', 'css_mqpacker', 'autoprefixer', 'cssmin' ]
             },
             scripts: {
                 files: ['<%= app.js_src %>/**/*.js'],
-                tasks: [ 'concat' ]
+                tasks: [ 'concat', 'uglify' ]
             }
         }
     });
