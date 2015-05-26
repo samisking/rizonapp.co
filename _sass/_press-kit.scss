@@ -1,0 +1,22 @@
+.asset {
+    text-align: center;
+
+    @include mq(min-lap) {
+        width: span(1,2);
+        display: inline-block;
+    }
+}
+
+    .asset__holder {
+        padding: $su*3;
+        background: $color-grey-light;
+        margin-bottom: $su/2;
+    }
+
+    .asset__holder--dark {
+        background: $color-black;
+    }
+
+    .asset__holder--small {
+        padding: $su;
+    }
